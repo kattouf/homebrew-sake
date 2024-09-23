@@ -3,15 +3,15 @@ class Sake < Formula
   homepage "https://github.com/kattouf/Sake"
   license "MIT"
 
-  version = "0.1.1"
+  version = "0.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-arm64-apple-macosx.zip"
-      sha256 "921b1657852d2de1484bf0e46c82ff6f9362a25beeb683ea119f07c3e6db63ee"
+      sha256 "027e89c5e0c5dde68796d37e975fe44ef34b1b8abbb7599ba9cb8750177ce845"
     else
       url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-x86_64-apple-macosx.zip"
-      sha256 "6651abad0705fb9205d6ac3f1150b119c1b4884746b6e9c717a33189e1df4fa1"
+      sha256 "e97eb3d6c3ff7c2bda1364fe46cea37709502422f6bd9b682f0d160c23f32673"
     end
   end
 

@@ -7,10 +7,10 @@ class Sake < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-arm64-apple-macosx.zip"
+      url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-#{version}-arm64-apple-macosx.zip"
       sha256 "5851241993c8735bf29de08d263f8aaf69f55369f9ed1c5ee12dd902305030fa"
     else
-      url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-x86_64-apple-macosx.zip"
+      url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-#{version}-x86_64-apple-macosx.zip"
       sha256 "1959637824f48dfd0e9e7d4f406b148339995204205103c6db56673c336e6a3b"
     end
   end

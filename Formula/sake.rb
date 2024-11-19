@@ -29,24 +29,24 @@ class Sake < Formula
     bin.install "sake"
   end
 
-  def caveats
-    return if system("swift --version > /dev/null 2>&1")
-
-    if OS.linux?
-      <<~EOS
-        This tool requires Swift to be installed.
-        Please download and install Swift from the official website:
-        https://swift.org/download#releases
-      EOS
-    elsif OS.mac?
-      <<~EOS
-        This tool requires Swift to be installed.
-        On macOS, you can install Swift via:
-          1. Xcode: Swift is included with Xcode, which can be downloaded from the App Store.
-          2. Homebrew: brew install swift
-        Alternatively, download Swift directly from the official website:
-        https://swift.org/download#releases
-      EOS
+  def post_install
+    unless system("swift --version > /dev/null 2>&1")
+      if OS.linux?
+        opoo <<~EOS
+          Swift is not installed. Please install Swift to use this tool.
+          You can download it from the official website:
+          https://swift.org/download#releases
+        EOS
+      elsif OS.mac?
+        opoo <<~EOS
+          Swift is not installed. Please install Swift to use this tool.
+          On macOS, you can install Swift via:
+            1. Xcode: Swift is included with Xcode, which can be downloaded from the App Store.
+            2. Homebrew: brew install swift
+          Alternatively, download it from the official website:
+          https://swift.org/download#releases
+        EOS
+      end
     end
   end
 

@@ -1,5 +1,5 @@
 class Sake < Formula
-  desc "A Swift-based utility for managing project commands, inspired by Make."
+  desc "Swift-based utility for managing project commands, inspired by Make"
   homepage "https://github.com/kattouf/Sake"
   license "MIT"
 
@@ -25,10 +25,12 @@ class Sake < Formula
     end
   end
 
+  def install
+    bin.install "sake"
+  end
+
   def caveats
-    if system("swift --version > /dev/null 2>&1")
-      return
-    end
+    return if system("swift --version > /dev/null 2>&1")
 
     if OS.linux?
       <<~EOS
@@ -47,12 +49,8 @@ class Sake < Formula
       EOS
     end
   end
-  
-  def install
-    bin.install "sake"
-  end
 
   test do
-    system "#{bin}/sake", "--help"
+    system bin/"sake", "--help"
   end
 end

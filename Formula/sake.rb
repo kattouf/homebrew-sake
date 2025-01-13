@@ -3,25 +3,25 @@ class Sake < Formula
   homepage "https://github.com/kattouf/Sake"
   license "MIT"
 
-  version = "0.3.0"
+  version = "0.3.1"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-#{version}-arm64-apple-macosx.zip"
-      sha256 "3b031e70a8f0612288b5c8da1250ca86b5a89d576124dd1b319726e6787735bb"
+      sha256 "5e092b9ce375707b35e5d17c6086ffac9d3e1a6a87e747035a02b5ec6b63af8b"
     else
       url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-#{version}-x86_64-apple-macosx.zip"
-      sha256 "20928b595be83b214c2e31cd4536c5d68def5fec516e44e10448b412f70d70ab"
+      sha256 "8dc1f95fda0d442993884725703cf26ca9b3c75dda1db2cb640f7e745ba1938f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-#{version}-aarch64-unknown-linux-gnu.zip"
-      sha256 "8bbc2b2f47074873a4e8c5d54767df79cf5a1b40e53a96a301ed8fdb69958c3b"
+      sha256 "7a7e8a72a3aa729b14e8c6c75617982d7c68d0f0ffe6d61e47dc033a72061f70"
     else
       url "https://github.com/kattouf/Sake/releases/download/#{version}/sake-#{version}-x86_64-unknown-linux-gnu.zip"
-      sha256 "0ada978fa830d4269bdbc977d29a887add71f062817e017cfea2891f05442bca"
+      sha256 "c9de7414d01fad71ffbcbef1ceaf93d8b222c28ebed11ea5ddf861b4139d93fb"
     end
   end
 

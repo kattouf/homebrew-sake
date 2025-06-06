@@ -3,7 +3,7 @@ class Sake < Formula
   homepage "https://github.com/kattouf/Sake"
   license "MIT"
 
-  version = "0.3.4"
+  version = "1.0.0"
 
   on_macos do
     if Hardware::CPU.arm?
